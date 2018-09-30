@@ -1,0 +1,61 @@
+﻿<Window x:Class="WpfApplication2_3009.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication2_3009"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+             <RowDefinition>
+            </RowDefinition>
+            <RowDefinition>
+            </RowDefinition>
+        </Grid.RowDefinitions>
+       
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>
+            </ColumnDefinition>
+            <ColumnDefinition>
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <local:Buttons x:Name="Butt00" Grid.Row ="0" Grid.Column="0" Margin="0, 0, 0, 0" MyButtonClick="ClickButt">
+                <local:Buttons x:Name="Butt01" MyButtonClick="ClickButt" Height="141" Width="232">
+                    <local:Buttons x:Name="Butt02" Height="120" Width="200" MyButtonClick="ClickButt">
+                    <local:Buttons x:Name="Butt03" Height="100" Width="180" MyButtonClick="ClickButt">
+                        <local:Buttons x:Name="Butt04" Height="80" Width="160" MyButtonClick="ClickButt">
+                        <local:Buttons x:Name="Butt05" Height="60" Width="140" MyButtonClick="ClickButt">
+                            <local:Buttons x:Name="Butt06" Height="40" Width="120" MyButtonClick="ClickButt">
+                                </local:Buttons>
+                            </local:Buttons>
+                        </local:Buttons>
+                    </local:Buttons>
+                </local:Buttons>
+                </local:Buttons>
+        </local:Buttons>
+
+        <local:Buttons x:Name="Butt10" Grid.Row="0" Grid.Column="1" MyButtonClick="ClickButt">
+            <local:Buttons x:Name="Butt11" MyButtonClick="ClickButt" Height="141" Width="232">
+                <local:Buttons x:Name="Butt12" Height="120" Width="200" MyButtonClick="ClickButt">
+                    <local:Buttons x:Name="Butt13" Height="100" Width="180" MyButtonClick="ClickButt">
+                        <local:Buttons x:Name="Butt14" Height="80" Width="160" MyButtonClick="ClickButt">
+                        </local:Buttons>
+                    </local:Buttons>
+                </local:Buttons>
+            </local:Buttons>
+        </local:Buttons>
+
+        <local:Buttons x:Name="Butt20" Grid.Row="1" Grid.Column="0" MyButtonClick="ClickButt">
+            <local:Buttons x:Name="Butt21" MyButtonClick="ClickButt" Height="141" Width="232">
+                <local:Buttons x:Name="Butt22" Height="120" Width="200" MyButtonClick="ClickButt">
+                </local:Buttons>
+            </local:Buttons>
+        </local:Buttons>
+
+        <local:Buttons x:Name="Butt30" Grid.Row="1" Grid.Column="1"  MyButtonClick="ClickButt">
+        </local:Buttons>
+
+    </Grid>
+</Window>

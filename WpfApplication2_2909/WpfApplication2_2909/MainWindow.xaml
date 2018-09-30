@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApplication2_2909.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication2_2909"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" MouseMove="Window_MouseMove">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="258*">
+            </ColumnDefinition>
+            <ColumnDefinition Width="71*">
+            </ColumnDefinition>
+            <ColumnDefinition Width="188*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition>
+            </RowDefinition>
+            <RowDefinition>
+            </RowDefinition>
+            <RowDefinition>
+            </RowDefinition>
+            <RowDefinition>
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Background="Red" Grid.Column="0" Grid.Row="0" Click="Button_Click"/>
+        <Button Background="black" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"/>
+        <Button Background="Black" Grid.Column="0" Grid.Row="1"/>
+        <Button Background="Red" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Button Background="Blue" Grid.Row="2" Grid.ColumnSpan="3"/>
+        <Button Background="LightGreen" Grid.Row="3" Grid.ColumnSpan="3" />
+
+
+    </Grid>
+</Window>
