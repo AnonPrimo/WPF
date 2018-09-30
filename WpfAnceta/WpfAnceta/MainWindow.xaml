@@ -49,6 +49,7 @@
 
         <CheckBox Content="китайська" HorizontalAlignment="Left" Margin="185,286,0,0" VerticalAlignment="Top"/>
         <ComboBox HorizontalAlignment="Left" Margin="279,259,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="38,212,0,0" VerticalAlignment="Top" Width="120"/>
 
 
 
