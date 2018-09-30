@@ -27,7 +27,7 @@
                     <local:Buttons x:Name="Butt03" Height="100" Width="180" MyButtonClick="ClickButt">
                         <local:Buttons x:Name="Butt04" Height="80" Width="160" MyButtonClick="ClickButt">
                         <local:Buttons x:Name="Butt05" Height="60" Width="140" MyButtonClick="ClickButt">
-                            <local:Buttons x:Name="Butt06" Height="40" Width="120" MyButtonClick="ClickButt">
+                            <local:Buttons x:Name="Butt06" Height="40" Width="117" MyButtonClick="ClickButt" HorizontalAlignment="Center" VerticalAlignment="Center">
                                 </local:Buttons>
                             </local:Buttons>
                         </local:Buttons>
