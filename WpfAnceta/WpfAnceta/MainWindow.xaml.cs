@@ -71,8 +71,24 @@ namespace WpfAnceta
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Вашу анкету прийнято!");
-            Close();
+            if (Check())
+            {
+                MessageBox.Show("Вашу анкету прийнято!");
+                Close();
+            }
+            else
+               MessageBox.Show("Ви не заповнили всі необхідні поля!");
+        }
+
+        private bool Check()
+        {
+            if (textBoxName.Text == "")
+                return false;
+            if (textBoxSirname.Text == "")
+                return false;
+            if (textBoxTelephone.Text == "")
+                return false;
+            return true;   
         }
 
         private void textBoxKeyPress(object sender, TextCompositionEventArgs e)
