@@ -6,54 +6,60 @@
         xmlns:local="clr-namespace:WpfAnceta"
         mc:Ignorable="d"
         Title="MainWindow" Height="380" Width="450">
-    <Grid Loaded="wpfLoad">
-        <Label Content="Анкета" HorizontalAlignment="Left" Margin="177,11,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Segoe UI Semibold"/>
+    <Grid MouseMove="wpfMouseMove" >
+        <Label Content="Анкета" HorizontalAlignment="Left" Margin="222,15,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Segoe UI Semibold"/>
 
-        <TextBox x:Name="textBoxName" Text="Ім'я" HorizontalAlignment="Left" Height="23" Margin="38,56,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"
-                 PreviewTextInput="textBoxKeyPress"/>
-        <Label Content="*" HorizontalAlignment="Left" Margin="23,81,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="textBoxName" Text="" HorizontalAlignment="Left" Height="23" Margin="76,57,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"
+                 PreviewTextInput="textBoxKeyPress"
+                 PreviewKeyDown="spaceError"/>
+        <Label Content="Ім'я*" HorizontalAlignment="Left" Margin="33,57,0,0" VerticalAlignment="Top" />
 
-        <TextBox x:Name="textBoxSirname" Text="Фамілія" HorizontalAlignment="Left" Height="23" Margin="205,56,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"
-                 PreviewTextInput="textBoxKeyPress"/>
-        <Label Content="*" HorizontalAlignment="Left" Margin="23,48,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="textBoxSirname" HorizontalAlignment="Left" Height="23" Margin="283,60,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"
+                 PreviewTextInput="textBoxKeyPress" 
+                 PreviewKeyDown="spaceError"/>
+        <Label Content="Фамілія*" HorizontalAlignment="Left" Margin="222,57,0,0" VerticalAlignment="Top" />
 
-        <TextBox x:Name="textBoxTelephone" Text="Телефон" HorizontalAlignment="Left" Height="23" Margin="38,84,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"
-                 PreviewTextInput="textBoxNumbers"/>
-        <Label Content="*" HorizontalAlignment="Left" Margin="185,48,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="textBoxTelephone" HorizontalAlignment="Left" Height="23" Margin="76,88,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"
+                 PreviewTextInput="textBoxNumbers"
+                 PreviewKeyDown="spaceError"/>
+        <Label Content="Телефон*" HorizontalAlignment="Left" Margin="6,88,0,0" VerticalAlignment="Top" />
 
-        <TextBox x:Name="textBoxEmail" Text="e-mail" HorizontalAlignment="Left" Height="23" Margin="38,112,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxEmail" PreviewKeyDown="spaceError" HorizontalAlignment="Left" Height="23" Margin="76,116,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="e-mail" HorizontalAlignment="Left" Margin="25,116,0,0" VerticalAlignment="Top" />
 
-        <TextBox x:Name="textBoxAdress" Text="Адреса" HorizontalAlignment="Left" Height="23" Margin="38,140,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxAdress" HorizontalAlignment="Left" Height="23" Margin="76,144,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="Адреса" HorizontalAlignment="Left" Margin="19,144,0,0" VerticalAlignment="Top" />
 
-        <ComboBox x:Name="comboBoxPosit" HorizontalAlignment="Left" Margin="38,168,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="comboBoxPosit" HorizontalAlignment="Left" Margin="76,172,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Посада*" HorizontalAlignment="Left" Margin="13,172,0,0" VerticalAlignment="Top" />
 
-        <Label Content="Знання мов:" HorizontalAlignment="Left" Margin="180,92,0,0" VerticalAlignment="Top"/>
+        <Label Content="Знання мов:" HorizontalAlignment="Left" Margin="217,92,0,0" VerticalAlignment="Top"/>
 
-        <CheckBox x:Name="checkBox_ukr" Content="українська" HorizontalAlignment="Left" Margin="185,124,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox_ukr" Visibility="Hidden"  HorizontalAlignment="Left" Margin="279,124,0,0" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="checkBox_ukr" Content="українська"  HorizontalAlignment="Left" Margin="222,124,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox_ukr" Visibility="Hidden"  HorizontalAlignment="Left" Margin="312,124,0,0" VerticalAlignment="Top" Width="120"/>
 
-        <CheckBox x:Name="checkBox_rus" Content="російська" HorizontalAlignment="Left" Margin="185,313,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox_rus" Visibility="Hidden"  HorizontalAlignment="Left" Margin="279,232,0,0" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="checkBox_rus" Content="російська" HorizontalAlignment="Left" Margin="222,313,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox_rus" Visibility="Hidden"  HorizontalAlignment="Left" Margin="312,313,0,0" VerticalAlignment="Top" Width="120"/>
 
-        <CheckBox x:Name="checkBox_eng"  Content="англійська" HorizontalAlignment="Left" Margin="185,151,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox_eng" Visibility="Hidden"  HorizontalAlignment="Left" Margin="279,205,0,0" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="checkBox_eng"  Content="англійська" HorizontalAlignment="Left" Margin="222,151,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox_eng" Visibility="Hidden"   HorizontalAlignment="Left" Margin="312,151,0,0" VerticalAlignment="Top" Width="120"/>
 
-        <CheckBox x:Name="checkBox_germ"  Content="німецька" HorizontalAlignment="Left" Margin="185,259,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox_germ" Visibility="Hidden"  HorizontalAlignment="Left" Margin="279,178,0,0" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="checkBox_germ"  Content="німецька" HorizontalAlignment="Left" Margin="222,259,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox_germ" Visibility="Hidden"   HorizontalAlignment="Left" Margin="312,259,0,0" VerticalAlignment="Top" Width="120"/>
 
-        <CheckBox x:Name="checkBox_fran"  Content="французька" HorizontalAlignment="Left" Margin="185,232,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox_fran" Visibility="Hidden"  HorizontalAlignment="Left" Margin="279,151,0,0" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="checkBox_fran"  Content="французька" HorizontalAlignment="Left" Margin="222,232,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox_fran" Visibility="Hidden"  HorizontalAlignment="Left" Margin="312,232,0,0" VerticalAlignment="Top" Width="120"/>
 
-        <CheckBox x:Name="checkBox_jap"  Content="японська" HorizontalAlignment="Left" Margin="185,205,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox_jap" Visibility="Hidden"  HorizontalAlignment="Left" Margin="279,313,0,0" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="checkBox_jap"  Content="японська" HorizontalAlignment="Left" Margin="222,205,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox_jap" Visibility="Hidden"  HorizontalAlignment="Left" Margin="312,205,0,0" VerticalAlignment="Top" Width="120"/>
 
-        <CheckBox x:Name="checkBox_ital"  Content="італійська" HorizontalAlignment="Left" Margin="185,178,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox_ital" Visibility="Hidden"  HorizontalAlignment="Left" Margin="279,286,0,0" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="checkBox_ital"  Content="італійська" HorizontalAlignment="Left" Margin="222,178,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox_ital" Visibility="Hidden"  HorizontalAlignment="Left" Margin="312,178,0,0" VerticalAlignment="Top" Width="120"/>
 
-        <CheckBox x:Name="checkBox_chi"  Content="китайська" HorizontalAlignment="Left" Margin="185,286,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox_chi" Visibility="Hidden" HorizontalAlignment="Left" Margin="279,259,0,0" VerticalAlignment="Top" Width="120"/>
-        
-        <Button Content="Підтведити" HorizontalAlignment="Left" Margin="38,212,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
+        <CheckBox x:Name="checkBox_chi"  Content="китайська" HorizontalAlignment="Left" Margin="222,286,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox_chi" Visibility="Hidden" HorizontalAlignment="Left" Margin="312,286,0,0" VerticalAlignment="Top" Width="120"/>
+
+        <Button Content="Підтведити" HorizontalAlignment="Left" Margin="76,216,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
 
 
 

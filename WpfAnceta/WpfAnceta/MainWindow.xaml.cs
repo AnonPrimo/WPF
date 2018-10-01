@@ -24,26 +24,55 @@ namespace WpfAnceta
         {
             InitializeComponent();
 
-            comboBoxPosit.Items.Add("Worker");
-            comboBoxPosit.Items.Add("Director");
-            comboBoxPosit.Items.Add("SystemAdministrator");
-            comboBoxPosit.Items.Add("Programer");
-            comboBoxPosit.Items.Add("Cleaner");
+            FillCb(comboBox_chi);
+            FillCb(comboBox_eng);
+            FillCb(comboBox_fran);
+            FillCb(comboBox_germ);
+            FillCb(comboBox_ital);
+            FillCb(comboBox_jap);
+            FillCb(comboBox_rus);
+            FillCb(comboBox_ukr);
 
-            
+            comboBoxPosit.Items.Add("Робітник");
+            comboBoxPosit.Items.Add("Директор");
+            comboBoxPosit.Items.Add("Сисадмін");
+            comboBoxPosit.Items.Add("Програміст");
+            comboBoxPosit.Items.Add("Прибиральник");
         }
 
-        private void wpfLoad(object sender, RoutedEventArgs e)
+        private void FillCb(ComboBox c)
         {
-            
+            c.Items.Add("Професійний");
+            c.Items.Add("Середній");
+            c.Items.Add("Низький");
+            c.Items.Add("Лише розмовна");
+            c.Items.Add("Лише письмо");
+        }
+        
+        private void wpfMouseMove(object sender, RoutedEventArgs e)
+        {
+            CheckCheckBox(checkBox_chi, comboBox_chi);
+            CheckCheckBox(checkBox_eng, comboBox_eng);
+            CheckCheckBox(checkBox_ukr, comboBox_ukr);
+            CheckCheckBox(checkBox_rus, comboBox_rus);
+            CheckCheckBox(checkBox_ital, comboBox_ital);
+            CheckCheckBox(checkBox_jap, comboBox_jap);
+            CheckCheckBox(checkBox_fran, comboBox_fran);
+            CheckCheckBox(checkBox_germ, comboBox_germ);
+        }
 
-
+        private void CheckCheckBox(CheckBox ch, ComboBox co)
+        {
+            if ((bool)ch.IsChecked)
+                co.Visibility = Visibility.Visible;
+            else
+                co.Visibility = Visibility.Hidden;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if(checkBox_chi.Checked)
-            comboBox_chi.Visibility = Visibility.Visible;
+            MessageBox.Show("Вашу анкету прийнято!");
+            Close();
         }
 
         private void textBoxKeyPress(object sender, TextCompositionEventArgs e)
@@ -63,5 +92,11 @@ namespace WpfAnceta
             if (e.Text == " ")
                 e.Handled = true;
         }
+        private void spaceError(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+                e.Handled = true;
+        }
+
     }
 }
