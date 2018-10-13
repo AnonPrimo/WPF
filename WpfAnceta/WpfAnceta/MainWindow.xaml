@@ -12,7 +12,13 @@
         <TextBox x:Name="textBoxName" Text="" HorizontalAlignment="Left" Height="23" Margin="76,57,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"
                  PreviewTextInput="textBoxKeyPress"
                  PreviewKeyDown="spaceError"/>
-        <Label Content="Ім'я*" HorizontalAlignment="Left" Margin="33,57,0,0" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="33,57,0,0" VerticalAlignment="Top" >
+            <Run > Ім'я 
+                </Run>
+            
+            <Run Foreground="Red">*</Run>
+
+        </TextBlock>
 
         <TextBox x:Name="textBoxSirname" HorizontalAlignment="Left" Height="23" Margin="283,60,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"
                  PreviewTextInput="textBoxKeyPress" 
